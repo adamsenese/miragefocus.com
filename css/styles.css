@@ -437,6 +437,13 @@ a {
     
     .hero-actions {
         justify-content: center;
+        flex-direction: column; /* Stack buttons on mobile */
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%; /* Full width buttons for touch targets */
+        padding: 16px 24px; /* Larger touch target */
     }
     
     .feature-row {
@@ -455,6 +462,14 @@ a {
     .feature-info-box {
         text-align: left; /* Keep content readable */
         width: 100%;
+    }
+
+    .feature-text p {
+        font-size: 16px; /* Readable body text */
+    }
+
+    .hero-h1 {
+        font-size: 42px; /* Responsive heading */
     }
     
     .status-pill { display: none; }
