@@ -451,97 +451,51 @@ a {
     /* --- Hero Section --- */
     .hero-card {
         text-align: center;
-        padding: 40px 24px 40px; /* Increased bottom padding for buttons */
+        padding: 40px 20px 40px; /* Consistent padding */
         min-height: auto;
         border-radius: 24px;
         width: 100%;
         box-sizing: border-box;
-        display: flex; /* Switch to flex column for better control */
+        display: flex;
         flex-direction: column;
+        /* Ensure it doesn't get cut off */
+        margin-top: 0; 
+        transform: none; /* Remove any transforms causing shift */
+    }
+    
+    .hero-wrapper {
+        padding-top: calc(var(--nav-height) + 20px); /* Reduced top padding on mobile */
+        padding-bottom: 60px;
     }
     
     .hero-content {
         padding-bottom: 32px;
-        width: 100%; /* Ensure content takes full width */
-    }
-
-    .hero-actions {
-        justify-content: center;
-        flex-direction: column;
         width: 100%;
-        gap: 12px;
-        padding: 0 12px; /* Add internal padding so buttons don't hit edge */
-        box-sizing: border-box;
     }
 
-    /* Target specific buttons */
-    .hero-actions .btn, 
-    .feature-text .btn {
-        width: 100%;
-        padding: 14px 20px;
-        font-size: 16px;
-        white-space: nowrap; /* Prevent text wrap breaking layout */
-    }
-    
-    .site-header .btn {
-        width: auto;
-        padding: 8px 16px;
-        font-size: 13px;
+    /* --- Footer Optimization --- */
+    .site-footer {
+        padding: 60px 0 100px; /* Extra bottom padding for potential mobile usage */
     }
 
-    /* --- Features --- */
-    .feature-row {
-        text-align: center;
-        gap: 40px;
-    }
-    
-    .feature-row.reverse {
-        direction: ltr;
-    }
-    .feature-row.reverse .feature-text {
-        order: 0;
-    }
-    
-    .feature-info-box {
-        text-align: left;
-        width: 100%;
-        min-width: auto;
-        box-sizing: border-box;
-    }
-
-    .feature-text p {
-        font-size: 16px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-h1 {
-        font-size: 36px;
-        margin-bottom: 16px;
-    }
-    
-    .hero-sub {
-        font-size: 16px;
-        margin-bottom: 24px;
-    }
-
-    .status-pill { display: none; }
-    .nav-links { display: none; }
-    
-    /* --- Footer --- */
     .footer-grid {
-        grid-template-columns: 1fr; /* Single column stack */
-        gap: 48px; /* More breathing room between sections */
-        text-align: left; /* Align text left for readability */
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: left;
     }
 
-    .footer-col {
-        border-bottom: 1px solid rgba(255,255,255,0.05); /* Subtle divider */
-        padding-bottom: 24px;
-    }
-
-    .footer-col:last-child {
-        border-bottom: none;
+    /* Add Mobile Download Button in Footer */
+    .footer-download-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+        padding: 16px;
+        background: #fff;
+        color: #000;
+        border-radius: 100px;
+        font-weight: 700;
+        font-size: 16px;
     }
     
     .phone-mockup {
@@ -558,7 +512,8 @@ a {
         padding: 80px 0;
     }
     
-    .quote-text {
-        font-size: 24px;
+    .mobile-only-footer-btn {
+        display: block !important;
+        margin-top: 40px;
     }
 }
