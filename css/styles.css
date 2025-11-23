@@ -317,19 +317,49 @@ a {
     line-height: 1.5;
 }
 
+/* --- Features Zig Zag --- */
+.features-wrap {
+    padding: var(--section-gap) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    /* Ensure the row allows overflow for mascots if they extend beyond */
+    position: relative; 
+}
+
+/* ... existing code ... */
+
 .feature-image {
     background: #111;
     border-radius: 32px;
-    overflow: hidden;
+    /* CRITICAL: Allow mascot to hang out */
+    overflow: visible !important; 
     aspect-ratio: 1/1;
     border: 1px solid #222;
     position: relative;
+    z-index: 1; /* Base layer */
 }
 
-.feature-image img {
+.feature-image img:first-child {
+    /* The main product image needs to be contained */
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 32px; /* Apply radius to image directly since container is visible */
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-mascot {
+    z-index: 10; /* Float above everything */
 }
 
 /* --- Testimonial --- */
@@ -518,7 +548,7 @@ a {
     }
     
     .mobile-only-footer-btn {
-        display: block !important;
+        display: block;
         margin-top: 40px;
     }
 }
