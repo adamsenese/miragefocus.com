@@ -1,0 +1,186 @@
+/* --- Noise Texture --- */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* --- Scroll Section Premium --- */
+.scroll-section {
+    padding: 120px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Fade masks for scroll */
+.scroll-wrapper {
+    position: relative;
+}
+
+.scroll-wrapper::before,
+.scroll-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.scroll-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-root) 0%, transparent 100%);
+}
+
+.scroll-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-root) 0%, transparent 100%);
+}
+
+.scroll-deck {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    padding: 40px 5vw; /* Dynamic padding */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.deck-card {
+    min-width: 320px;
+    height: 480px;
+    background: #1a1a1c;
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.deck-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    border-color: rgba(255,255,255,0.2);
+    z-index: 5;
+}
+
+/* Card Content Gradient */
+.deck-content {
+    background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, transparent 100%);
+    padding: 32px;
+}
+
+.deck-content h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.deck-content p {
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* --- Footer Premium --- */
+.footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 100px 0 40px;
+    margin-top: 80px;
+    background: radial-gradient(circle at top center, rgba(255,255,255,0.03) 0%, transparent 70%);
+    position: relative;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.footer-col h5 {
+    color: #fff;
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.footer-col ul li {
+    margin-bottom: 16px;
+}
+
+.footer-col a {
+    color: var(--text-secondary);
+    font-size: 15px;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-block;
+}
+
+.footer-col a:hover {
+    color: #fff;
+    transform: translateX(4px);
+}
+
+.footer-brand-col p {
+    color: var(--text-tertiary);
+    font-size: 14px;
+    margin-top: 16px;
+    max-width: 240px;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-tertiary);
+    font-size: 13px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* --- Info Card Subtle Gradients --- */
+.info-card.blue-glow {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.08), rgba(74, 144, 226, 0.02));
+    border: 1px solid rgba(74, 144, 226, 0.15);
+}
+
+.info-card.orange-glow {
+    background: linear-gradient(135deg, rgba(255, 121, 0, 0.08), rgba(255, 121, 0, 0.02));
+    border: 1px solid rgba(255, 121, 0, 0.15);
+}
+
