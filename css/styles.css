@@ -23,16 +23,20 @@
 }
 
 /* --- Reset & Typography --- */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 body {
     font-family: 'DM Sans', -apple-system, sans-serif;
     background-color: var(--bg-root);
     color: var(--text-primary);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden; /* Prevent horizontal scroll */
     margin: 0;
     padding: 0;
-    width: 100%;
 }
 
 .container {
@@ -444,6 +448,8 @@ a {
         padding: 40px 20px 0; /* Reduced side padding */
         min-height: auto;
         border-radius: 24px; /* Smaller radius on mobile */
+        width: 100%; /* Ensure it doesn't overflow container */
+        box-sizing: border-box;
     }
     
     .hero-content {
@@ -457,12 +463,20 @@ a {
         gap: 12px;
     }
 
-    .btn {
+    /* Target specific buttons to avoid breaking header button */
+    .hero-actions .btn, 
+    .feature-text .btn {
         width: 100%; /* Full width buttons for touch targets */
         padding: 14px 24px; /* Larger touch target */
         font-size: 16px;
     }
     
+    .site-header .btn {
+        width: auto; /* Keep header button compact */
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
     .feature-row {
         text-align: center;
         gap: 40px;
@@ -508,7 +522,9 @@ a {
     }
     
     .phone-mockup {
-        width: 280px; /* Smaller phone for mobile */
+        width: 100%; /* Flexible width */
+        max-width: 280px; /* Max constraint */
+        margin: 0 auto;
     }
     
     .features-wrap {
