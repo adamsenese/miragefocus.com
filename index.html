@@ -3,228 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirage - Focus through Mindfulness</title>
+    <title>Mirage - The Mindful App Blocker</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header class="site-header">
-        <div class="container">
+        <div class="container header-inner">
             <a href="#" class="logo">Mirage</a>
-            <nav class="nav-links">
+            <nav class="nav-center">
                 <a href="#features">Features</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#blog">Blog</a>
+                <a href="#support">Support</a>
             </nav>
-            <a href="#" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Download</a>
+            <a href="#" class="btn btn-primary" style="padding: 8px 20px; font-size: 14px;">Download</a>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-card">
+    <div class="main-wrapper">
+        
+        <!-- Hero Card Section -->
+        <div class="container">
+            <div class="hero-card">
+                <div class="hero-text">
                     <div class="badge">
-                        <span>&#11088;</span> Apps We Love • 5k+ Reviews
+                        <span>🔥</span> Apps We Love • 5k+ Reviews
                     </div>
-                    <h1>Overwhelmed? <br>Not anymore.</h1>
-                    <p>Meet Mirage. The easiest way to build better screen time habits with Affirmations and Mindfulness.</p>
+                    <h1 class="hero-h1">Overwhelmed? <br>Not anymore.</h1>
+                    <p class="hero-sub">Meet Mirage. The easiest way to build better screen time habits on iPhone, iPad and Mac.</p>
                     
-                    <div class="hero-buttons">
-                        <a href="#" class="btn btn-black">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.74s1.84-.64 3.29-.66c1.71.03 3.16.83 3.96 2.02-3.57 1.86-2.98 6.87.45 8.53-.75 1.6-1.85 2.97-2.78 4.24zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary">
+                            <svg width="18" height="18" fill="currentColor" style="margin-right:8px" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.74s1.84-.64 3.29-.66c1.71.03 3.16.83 3.96 2.02-3.57 1.86-2.98 6.87.45 8.53-.75 1.6-1.85 2.97-2.78 4.24zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
                             Download
                         </a>
-                        <a href="#" class="btn btn-primary">
+                        <a href="#" class="btn btn-blur">
                             Join Waitlist
                         </a>
                     </div>
-
-                    <div class="hero-phone-container">
-                        <div class="hero-phone">
-                            <img src="https://placehold.co/400x800/121212/333?text=Mirage+App" style="width: 100%; border-radius: 40px; display: block;" alt="App Screen">
-                        </div>
-                        <!-- Floating Elements -->
-                        <div class="floating-card float-left">
-                            <span>🧘</span> Deep Work
-                        </div>
-                        <div class="floating-card float-right">
-                            <span>🔒</span> Instagram is blocked
-                        </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="status-float status-1">
+                        <span>🧘</span> Deep Work
+                    </div>
+                    <div class="status-float status-2">
+                        <span>🔒</span> Instagram Blocked
+                    </div>
+                    <div class="phone-mockup">
+                        <!-- App Screen Placeholder -->
+                        <img src="https://placehold.co/340x700/000000/333333?text=Mirage+UI" alt="Mirage App">
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Mission Section -->
+        <section class="mission-section container">
+            <div class="mission-mascot">
+                <img src="https://placehold.co/120x120/111/FF7900?text=M" style="border-radius: 24px;" alt="Mascot">
+            </div>
+            <h2 class="mission-h2">Embrace the Joy of <br>Missing Out</h2>
+            <p class="mission-sub">Use your phone for things you truly care about. Happily miss out on everything else.</p>
+            <div class="platform-btns">
+                <a href="#" class="btn btn-dark" style="width: 140px;">Mac</a>
+                <a href="#" class="btn btn-dark" style="width: 140px;">iPhone</a>
+            </div>
         </section>
 
-        <!-- Mission / Illustration -->
-        <section class="mission-section">
-            <div class="container">
-                <div class="mission-visual">
-                    <img src="https://placehold.co/300x300/161618/f2997a?text=Zen+Mascot" alt="Mascot">
-                </div>
-                <div class="mission-content">
-                    <h2>Embrace the Joy of<br>Missing Out</h2>
-                    <p class="subhead">Use your phone for things you truly care about.<br>Happily miss out on everything else.</p>
+        <!-- Features Zig Zag -->
+        <section class="features-wrap container">
+            
+            <!-- Feature 1 -->
+            <div class="feature-row">
+                <div class="feature-text">
+                    <h3 class="feature-h3">Your phone, your rules</h3>
+                    <p class="feature-p">Block distracting apps your way: at set times, after a limit, or until you take action. Mirage does it all.</p>
                     
-                    <div class="mission-buttons">
-                         <a href="#" class="btn btn-black" style="width: 160px; justify-content: center;">Mac</a>
-                         <a href="#" class="btn btn-black" style="width: 160px; justify-content: center;">iPhone</a>
+                    <div class="info-card blue-glow">
+                        <div class="info-icon">ℹ️</div>
+                        <div class="info-stat">88% of users</div>
+                        <div class="info-desc">Cannot imagine their phone without Mirage after a week.</div>
                     </div>
+
+                    <a href="#" class="btn btn-dark">Discover all Rules</a>
+                </div>
+                <div class="feature-img-box">
+                    <img src="https://placehold.co/500x500/1c1c1e/333?text=Rules+UI" alt="Rules">
                 </div>
             </div>
-        </section>
 
-        <!-- Feature 1: Rules -->
-        <section class="feature-block">
-            <div class="container">
-                <div class="feature-grid">
-                    <div class="feature-content">
-                        <h2>Your phone, your rules</h2>
-                        <p>Block distracting apps your way: at set times, after a limit, or until you take action. Mirage does it all.</p>
-                        
-                        <div class="info-box blue">
-                            <div style="margin-bottom: 6px; font-size: 1.5rem;">ℹ️</div>
-                            <strong>88% of users</strong>
-                            <span>Cannot imagine their phone without Mirage after a week.</span>
-                        </div>
+            <!-- Feature 2 (Reverse) -->
+            <div class="feature-row reverse">
+                <div class="feature-text">
+                    <h3 class="feature-h3">Pick the right block strength</h3>
+                    <p class="feature-p">Choose if you want to quickly unblock apps to scroll intentionally or lock the block so it can't be disabled.</p>
+                    
+                    <div class="info-card orange-glow">
+                        <div class="info-icon">🔒</div>
+                        <div class="info-stat">Stick with it!</div>
+                        <div class="info-desc">Mirage rules are 5x more likely to last than native settings.</div>
+                    </div>
 
-                        <a href="#" class="btn btn-black">Discover all Rules</a>
-                    </div>
-                    <div class="feature-visual">
-                        <img src="https://placehold.co/500x500/222/444?text=Rules+Interface" alt="Rules UI">
-                    </div>
+                    <a href="#" class="btn btn-dark">Breaks & Strict Mode</a>
+                </div>
+                <div class="feature-img-box">
+                    <img src="https://placehold.co/500x500/1c1c1e/333?text=Strict+Mode" alt="Strict Mode">
                 </div>
             </div>
-        </section>
 
-        <!-- Feature 2: Block Strength (Reversed) -->
-        <section class="feature-block">
-            <div class="container">
-                <div class="feature-grid" style="direction: rtl;">
-                    <div class="feature-content" style="direction: ltr;">
-                        <h2>Pick the right block strength</h2>
-                        <p>Choose if you want to quickly unblock apps to scroll intentionally or lock the block so it can't be disabled.</p>
-                        
-                        <div class="info-box peach">
-                            <div style="margin-bottom: 6px; font-size: 1.5rem;">🔒</div>
-                            <strong>Stick with it!</strong>
-                            <span>Mirage rules are 5x more likely to last than native settings.</span>
-                        </div>
+            <!-- Feature 3 -->
+            <div class="feature-row">
+                <div class="feature-text">
+                    <h3 class="feature-h3">Track, Identify & Improve</h3>
+                    <p class="feature-p">Learn more about your bad habits, how they affect your life, and correct them in just a few taps.</p>
+                    
+                    <div class="info-card blue-glow">
+                        <div class="info-icon">📊</div>
+                        <div class="info-stat">1h48 per day</div>
+                        <div class="info-desc">This is the time people reclaim in their day by using Mirage.</div>
+                    </div>
 
-                        <a href="#" class="btn btn-black">Breaks & Strict Mode</a>
-                    </div>
-                    <div class="feature-visual" style="direction: ltr;">
-                        <img src="https://placehold.co/500x500/222/444?text=Strict+Mode+UI" alt="Block Strength UI">
-                    </div>
+                    <a href="#" class="btn btn-dark">Screen Time Journaling</a>
+                </div>
+                <div class="feature-img-box">
+                    <img src="https://placehold.co/500x500/1c1c1e/333?text=Analytics" alt="Analytics">
                 </div>
             </div>
-        </section>
 
-        <!-- Feature 3: Track & Improve -->
-        <section class="feature-block">
-            <div class="container">
-                <div class="feature-grid">
-                    <div class="feature-content">
-                        <h2>Track, Identify & Improve</h2>
-                        <p>Learn more about your bad habits, how they affect your life, and correct them in just a few taps—no hassle.</p>
-                        
-                        <div class="info-box sage">
-                            <div style="margin-bottom: 6px; font-size: 1.5rem;">📊</div>
-                            <strong>1h48 per day</strong>
-                            <span>This is the time people reclaim in their day by using Mirage.</span>
-                        </div>
-
-                        <a href="#" class="btn btn-black">Screen Time Journaling</a>
-                    </div>
-                    <div class="feature-visual">
-                        <img src="https://placehold.co/500x500/222/444?text=Analytics+Charts" alt="Analytics UI">
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- Testimonial -->
-        <section class="testimonial-section">
-            <div class="container" style="display: flex; justify-content: center;">
-                <div class="testimonial-large">
-                    <div class="quote-badge">❞</div>
-                    <div class="user-profile" style="margin-bottom: 24px;">
-                        <img src="https://placehold.co/100x100/333/fff?text=U" alt="User">
-                        <div>
-                            <strong>Iffymon</strong> <span style="color: #3b82f6;">✓ App Store</span>
-                        </div>
-                    </div>
-                    <h3>"The dark horse of blocking apps. Mirage is a remarkable app that manages to everything I want. An absolute joy to use."</h3>
+        <div class="container">
+            <div class="testimonial-wrap">
+                <div class="test-badge">”</div>
+                <h3 class="test-quote">"The dark horse of blocking apps. Mirage is a remarkable app that manages to everything I want. An absolute joy to use."</h3>
+                <div class="test-author">
+                    <img src="https://placehold.co/40x40/333/fff" style="border-radius: 50%" alt="Author">
+                    <span>Iffymon • App Store</span>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Use Cases Scroll -->
-        <section class="use-cases-section">
-            <div class="container">
-                <div class="use-cases-header">
-                    <h2>There's a perfect rule for you on Mirage.</h2>
-                    <p class="subhead">Join 200,000+ people getting their lives back.</p>
-                </div>
-                
-                <div class="scroll-container">
-                    <!-- Card 1 -->
-                    <div class="use-case-card" style="background-image: url('https://placehold.co/300x400/333/555?text=Image'); background-size: cover;">
-                        <div class="use-case-content">
-                            <h4>Intentional Use</h4>
-                            <p>No endless scrolling. Apps only open when you truly need them.</p>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="use-case-card" style="background-image: url('https://placehold.co/300x400/444/666?text=Image'); background-size: cover;">
-                        <div class="use-case-content">
-                            <h4>Study Time</h4>
-                            <p>Block distracting apps for 30min and dive into focused learning.</p>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="use-case-card" style="background-image: url('https://placehold.co/300x400/555/777?text=Image'); background-size: cover;">
-                        <div class="use-case-content">
-                            <h4>Bike & Breathe</h4>
-                            <p>Trade dopamine hits for endorphins. Pedal before you scroll.</p>
-                        </div>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="use-case-card" style="background-image: url('https://placehold.co/300x400/666/888?text=Image'); background-size: cover;">
-                        <div class="use-case-content">
-                            <h4>Deep Work</h4>
-                            <p>One quiet hour. Block distractions for just one hour.</p>
-                        </div>
+        <section class="scroll-section">
+            <div class="container scroll-header">
+                <h2 class="mission-h2">There's a perfect rule for you.</h2>
+                <p class="mission-sub">Join 200,000+ people getting their lives back.</p>
+            </div>
+            
+            <div class="scroll-deck">
+                <div class="deck-card">
+                    <img src="https://placehold.co/300x400/222/333?text=Intentional" alt="Bg">
+                    <div class="deck-content">
+                        <h4>Intentional Use</h4>
+                        <p style="color: #ccc; font-size: 14px;">No endless scrolling. Apps only open when you truly need them.</p>
                     </div>
                 </div>
+                <div class="deck-card">
+                    <img src="https://placehold.co/300x400/333/444?text=Study" alt="Bg">
+                    <div class="deck-content">
+                        <h4>Study Time</h4>
+                        <p style="color: #ccc; font-size: 14px;">Block distracting apps for 30min and dive into focused learning.</p>
+                    </div>
+                </div>
+                <div class="deck-card">
+                    <img src="https://placehold.co/300x400/444/555?text=Breathe" alt="Bg">
+                    <div class="deck-content">
+                        <h4>Bike & Breathe</h4>
+                        <p style="color: #ccc; font-size: 14px;">Trade dopamine hits for endorphins.</p>
+                    </div>
+                </div>
+                <div class="deck-card">
+                    <img src="https://placehold.co/300x400/555/666?text=Deep+Work" alt="Bg">
+                    <div class="deck-content">
+                        <h4>Deep Work</h4>
+                        <p style="color: #ccc; font-size: 14px;">One quiet hour. Block distractions for just one hour.</p>
+                    </div>
+                </div>
+                <div class="deck-card">
+                    <img src="https://placehold.co/300x400/666/777?text=Evening" alt="Bg">
+                    <div class="deck-content">
+                        <h4>Earn Your Evening</h4>
+                        <p style="color: #ccc; font-size: 14px;">Train before screens. Screens are the dessert.</p>
+                    </div>
+                </div>
+            </div>
 
-                <div class="footer-cta-box">
-                    <a href="#" class="btn btn-black">Mac</a>
-                    <a href="#" class="btn btn-black">iPhone</a>
+            <div class="container" style="text-align: center; margin-top: 40px;">
+                <div class="platform-btns">
+                    <a href="#" class="btn btn-dark" style="width: 140px;">Mac</a>
+                    <a href="#" class="btn btn-dark" style="width: 140px;">iPhone</a>
                 </div>
             </div>
         </section>
 
-        <!-- Simple Footer -->
-        <footer class="site-footer" style="border-top: none; padding-top: 20px;">
-            <div class="container" style="text-align: center; color: var(--text-muted); font-size: 0.9rem;">
-                <p style="margin-bottom: 20px;">The Joy Of Missing Out</p>
-                <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
-                    <a href="#">Student Discount</a>
-                    <a href="#">About us</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Terms of use</a>
-                    <a href="#">Privacy Policy</a>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h5 style="color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">Mirage</h5>
+                        <ul>
+                            <li><a href="#">The Joy Of Missing Out</a></li>
+                            <li><a href="#">Student Discount</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Product</h5>
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Download</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Press Kit</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Legal</h5>
+                        <ul>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div style="margin-top: 30px; opacity: 0.5;">
-                    &copy; 2025 Mirage
+                <div style="text-align: center; margin-top: 60px; color: #444; font-size: 13px;">
+                    &copy; 2025 Mirage. All rights reserved.
                 </div>
             </div>
         </footer>
-    </main>
+
+    </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>
