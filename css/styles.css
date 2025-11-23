@@ -422,42 +422,51 @@ a {
     text-align: center;
 }
 
-/* Device pills row */
-.footer-device-row {
-    display: inline-flex;
+/* Logo + App Store CTA */
+.footer-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 16px;
-    padding: 12px;
-    border-radius: 999px;
-    margin-bottom: 48px;
-    background: transparent;
-    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
-.device-pill {
+.footer-logo-mark {
+    width: 40px;
+    height: 40px;
+}
+
+.appstore-button {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 14px 40px;
+    gap: 10px;
+    padding: 10px 22px;
     border-radius: 999px;
     background: #000;
     color: #fff;
-    font-weight: 600;
+    border: 1px solid #111;
+}
+
+.appstore-icon {
+    font-size: 20px;
+}
+
+.appstore-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.1;
+}
+
+.appstore-small {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+.appstore-large {
     font-size: 16px;
-    border: 1px solid #000;
-}
-
-.device-pill-primary {
-    background: #fff;
-    color: #000;
-}
-
-.device-icon {
-    font-size: 18px;
-}
-
-.device-logo {
-    width: 18px;
-    height: 18px;
+    font-weight: 600;
 }
 
 /* Tagline & links */
