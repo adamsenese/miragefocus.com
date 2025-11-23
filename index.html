@@ -7,8 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/mirage-logo.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/premium_components.css">
+    <link rel="stylesheet" href="css/mascots.css">
 </head>
 <body>
     <div class="noise-overlay"></div>
@@ -16,11 +18,12 @@
     <!-- Sticky Header -->
     <header class="site-header">
         <div class="container header-inner">
-            <a href="#" class="logo">Mirage</a>
+            <a href="#" class="logo" style="display: flex; align-items: center; gap: 12px;">
+                <img src="assets/images/mirage-logo.png" alt="Mirage Logo" style="width: 32px; height: 32px;">
+                Mirage
+            </a>
             <nav class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#blog">Blog</a>
+                <!-- Navigation removed as requested -->
             </nav>
             <a href="#" class="btn btn-primary" style="padding: 8px 20px; font-size: 14px;">Download</a>
         </div>
@@ -38,11 +41,14 @@
                 
                 <div class="hero-actions">
                     <a href="#" class="btn btn-primary">Download for iOS</a>
-                    <a href="#" class="btn btn-blur">Join Waitlist</a>
                 </div>
             </div>
 
             <div class="hero-visual">
+                <!-- Mascot Floating Top -->
+                <div class="hero-mascot-float">
+                    <img src="assets/images/mirage-mascot.png" alt="Mascot" style="width: 80px; height: auto;">
+                </div>
                 <div class="status-pill left">
                     <span>🧘</span> Deep Breath
                 </div>
@@ -74,6 +80,9 @@
             </div>
             <div class="feature-image">
                 <img src="https://placehold.co/600x600/111/222?text=Breathing+Prompt" alt="Breathing Prompt">
+                <div class="feature-mascot corner-top-right">
+                    <img src="assets/images/mirage-mascot.png" alt="Mascot">
+                </div>
             </div>
         </div>
 
@@ -92,6 +101,9 @@
             </div>
             <div class="feature-image">
                 <img src="https://placehold.co/600x600/111/222?text=Affirmations" alt="Affirmations UI">
+                <div class="feature-mascot corner-bottom-left">
+                    <img src="assets/images/mirage-mascot.png" alt="Mascot">
+                </div>
             </div>
         </div>
 
@@ -110,6 +122,9 @@
             </div>
             <div class="feature-image">
                 <img src="https://placehold.co/600x600/111/222?text=Mindful+Stats" alt="Mindful Analytics">
+                <div class="feature-mascot corner-bottom-right">
+                    <img src="assets/images/mirage-mascot.png" alt="Mascot">
+                </div>
             </div>
         </div>
     </section>
@@ -129,37 +144,41 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container footer-grid">
+        <div class="container footer-grid-stack">
             <div class="footer-brand">
+                <img src="assets/images/mirage-logo.png" alt="Mirage Logo" style="width: 48px; height: 48px; margin-bottom: 16px;">
                 <h4>Mirage</h4>
                 <p>The mindful app blocker for a focused life.</p>
             </div>
-            <div class="footer-col">
-                <h5>Product</h5>
-                <ul>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Download</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Company</h5>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Legal</h5>
-                <ul>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Privacy</a></li>
-                </ul>
+            
+            <div class="footer-links-stack">
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="container mobile-only-footer-btn" style="display: none;">
-             <a href="#" class="btn btn-primary" style="width: 100%; text-align: center; display: block; padding: 16px;">Download Mirage</a>
+        <div class="container mobile-only-footer-btn">
+             <a href="#" class="btn btn-primary" style="width: 100%; max-width: 100%; box-sizing: border-box; text-align: center; display: block; padding: 16px;">Download Mirage</a>
         </div>
     </footer>
 

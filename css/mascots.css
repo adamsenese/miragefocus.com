@@ -1,0 +1,82 @@
+/* --- Mascot Animations --- */
+.hero-mascot-float {
+    position: absolute;
+    top: 15%;
+    right: 45%;
+    z-index: 5;
+    animation: float-mascot 6s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+.feature-mascot {
+    position: absolute;
+    width: 100px;
+    z-index: 5;
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.4));
+    animation: float-mascot 5s ease-in-out infinite;
+}
+
+.corner-top-right {
+    top: -20px;
+    right: -20px;
+    transform: rotate(10deg);
+}
+
+.corner-bottom-left {
+    bottom: -20px;
+    left: -20px;
+    transform: rotate(-10deg);
+}
+
+.corner-bottom-right {
+    bottom: -20px;
+    right: -20px;
+    transform: rotate(5deg);
+}
+
+@keyframes float-mascot {
+    0%, 100% { transform: translateY(0) rotate(var(--rotation, 0deg)); }
+    50% { transform: translateY(-15px) rotate(var(--rotation, 0deg)); }
+}
+
+/* Set rotation per corner for animation keyframes if needed, or rely on base transform + translate */
+/* Simpler wobble float */
+@keyframes float-mascot {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-12px) scale(1.02); }
+}
+
+/* Specific overrides to maintain tilt during animation */
+.corner-top-right { animation-name: float-tilt-right; }
+.corner-bottom-left { animation-name: float-tilt-left; }
+.corner-bottom-right { animation-name: float-tilt-right-subtle; }
+
+@keyframes float-tilt-right {
+    0%, 100% { transform: translateY(0) rotate(10deg); }
+    50% { transform: translateY(-15px) rotate(12deg); }
+}
+
+@keyframes float-tilt-left {
+    0%, 100% { transform: translateY(0) rotate(-10deg); }
+    50% { transform: translateY(-15px) rotate(-12deg); }
+}
+
+@keyframes float-tilt-right-subtle {
+    0%, 100% { transform: translateY(0) rotate(5deg); }
+    50% { transform: translateY(-15px) rotate(7deg); }
+}
+
+/* Mobile Hide */
+@media (max-width: 768px) {
+    .hero-mascot-float {
+        width: 60px;
+        top: 5%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    
+    .feature-mascot {
+        width: 70px;
+    }
+}
+
