@@ -437,74 +437,86 @@ a {
 }
 
 @media (max-width: 768px) {
+    /* --- Mobile Layout Reset --- */
+    .container {
+        padding: 0 20px; /* Consistent padding for Nav and Body */
+        max-width: 100%; /* Allow full width usage up to edges */
+    }
+
     /* Reset grids to stacks */
     .hero-card, .feature-row, .footer-grid {
         grid-template-columns: 1fr;
     }
     
-    /* Reset alignments */
+    /* --- Hero Section --- */
     .hero-card {
         text-align: center;
-        padding: 40px 20px 0; /* Reduced side padding */
+        padding: 40px 24px 40px; /* Increased bottom padding for buttons */
         min-height: auto;
-        border-radius: 24px; /* Smaller radius on mobile */
-        width: 100%; /* Ensure it doesn't overflow container */
+        border-radius: 24px;
+        width: 100%;
         box-sizing: border-box;
+        display: flex; /* Switch to flex column for better control */
+        flex-direction: column;
     }
     
     .hero-content {
-        padding-bottom: 40px; /* Reduced gap */
+        padding-bottom: 32px;
+        width: 100%; /* Ensure content takes full width */
     }
 
     .hero-actions {
         justify-content: center;
-        flex-direction: column; /* Stack buttons on mobile */
+        flex-direction: column;
         width: 100%;
         gap: 12px;
+        padding: 0 12px; /* Add internal padding so buttons don't hit edge */
+        box-sizing: border-box;
     }
 
-    /* Target specific buttons to avoid breaking header button */
+    /* Target specific buttons */
     .hero-actions .btn, 
     .feature-text .btn {
-        width: 100%; /* Full width buttons for touch targets */
-        padding: 14px 24px; /* Larger touch target */
+        width: 100%;
+        padding: 14px 20px;
         font-size: 16px;
+        white-space: nowrap; /* Prevent text wrap breaking layout */
     }
     
     .site-header .btn {
-        width: auto; /* Keep header button compact */
+        width: auto;
         padding: 8px 16px;
         font-size: 13px;
     }
 
+    /* --- Features --- */
     .feature-row {
         text-align: center;
         gap: 40px;
     }
     
-    /* Fix visual order for reversed rows on mobile */
     .feature-row.reverse {
-        direction: ltr; /* Reset direction */
+        direction: ltr;
     }
     .feature-row.reverse .feature-text {
-        order: 0; /* Keep text first if desired, or 1 to flip */
+        order: 0;
     }
     
     .feature-info-box {
-        text-align: left; /* Keep content readable */
+        text-align: left;
         width: 100%;
         min-width: auto;
         box-sizing: border-box;
     }
 
     .feature-text p {
-        font-size: 16px; /* Readable body text */
+        font-size: 16px;
         margin-left: auto;
         margin-right: auto;
     }
 
     .hero-h1 {
-        font-size: 36px; /* Smaller responsive heading */
+        font-size: 36px;
         margin-bottom: 16px;
     }
     
@@ -514,21 +526,32 @@ a {
     }
 
     .status-pill { display: none; }
-    .nav-links { display: none; } /* Simple hide for now */
+    .nav-links { display: none; }
     
-    /* Footer spacing */
+    /* --- Footer --- */
     .footer-grid {
-        gap: 40px;
+        grid-template-columns: 1fr; /* Single column stack */
+        gap: 48px; /* More breathing room between sections */
+        text-align: left; /* Align text left for readability */
+    }
+
+    .footer-col {
+        border-bottom: 1px solid rgba(255,255,255,0.05); /* Subtle divider */
+        padding-bottom: 24px;
+    }
+
+    .footer-col:last-child {
+        border-bottom: none;
     }
     
     .phone-mockup {
-        width: 100%; /* Flexible width */
-        max-width: 280px; /* Max constraint */
+        width: 100%;
+        max-width: 280px;
         margin: 0 auto;
     }
     
     .features-wrap {
-        gap: 80px; /* Reduced gap between features */
+        gap: 80px;
     }
     
     .testimonial-section {
