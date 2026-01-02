@@ -3,19 +3,46 @@
     --max-width: 1140px;
     --nav-height: 72px;
     
-    /* Colors */
+    /* Base Colors */
     --bg-root: #000000;
     --bg-card: #121212;
     --text-primary: #FFFFFF;
     --text-secondary: #9ca3af;
     --text-tertiary: #6b7280;
     
-    /* Accents */
+    /* Blue Accents - Primary Brand Colors */
+    --blue-steel: #5B8DB8;
+    --blue-bright: #6FA3D0;
+    --blue-deep: #4A7A9E;
+    --blue-tab-selected: #5B9BD5;
+    --blue-legacy-900: #5B9BD5;
+    --blue-legacy-700: #5B9BD5;
+    --blue-legacy-500: #64B5F6;
+    --blue-legacy-300: #90CAF9;
+    
+    /* Gold/Earth Tones - Premium & Warm Accents */
+    --gold-sand: #C9A87C;
+    --gold-warm: #D4B896;
+    --bronze: #A68B5B;
+    --gold-premium: #D4AF37;
+    
+    /* Status Colors */
+    --status-success: #7BA88E; /* Sage Green */
+    --status-warning: #D4A853; /* Warm Amber */
+    --status-error: #C4716A; /* Terracotta */
+    
+    /* Additional Accents */
+    --accent-rose: #B8878F; /* Dusty Rose */
+    --accent-sienna: #C4856A; /* Burnt Sienna */
+    
+    /* Legacy Accents (for backward compatibility) */
     --accent-orange: #FF7900;
-    --accent-blue: #3b82f6;
+    --accent-blue: var(--blue-steel); /* Map to primary blue */
     
     /* Gradients */
     --hero-gradient: linear-gradient(180deg, #1c1c1e 0%, #000000 100%);
+    --blue-gradient: linear-gradient(135deg, var(--blue-steel) 0%, var(--blue-deep) 100%);
+    --gold-gradient: linear-gradient(135deg, var(--gold-warm) 0%, var(--bronze) 100%);
     
     /* Spacing */
     --section-gap: 120px;
@@ -123,12 +150,15 @@ a {
 }
 
 .btn-primary {
-    background: #fff;
-    color: #000;
+    background: var(--blue-steel);
+    color: #fff;
+    border: 1px solid var(--blue-steel);
 }
 
 .btn-primary:hover {
     transform: scale(1.03);
+    background: var(--blue-bright);
+    border-color: var(--blue-bright);
 }
 
 .btn-blur {
@@ -158,7 +188,8 @@ a {
     min-height: 640px;
     position: relative;
     overflow: hidden;
-    border: 1px solid #222;
+    border: 1px solid rgba(91, 141, 184, 0.2);
+    box-shadow: 0 0 60px rgba(91, 141, 184, 0.05);
 }
 
 .hero-content {
@@ -170,20 +201,21 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(91, 141, 184, 0.15);
+    border: 1px solid rgba(91, 141, 184, 0.3);
     padding: 6px 14px;
     border-radius: 100px;
     font-size: 13px;
     font-weight: 600;
     margin-bottom: 24px;
+    color: var(--blue-legacy-300);
 }
 
 .hero-h1 {
     font-size: 64px;
     line-height: 1.05;
     margin-bottom: 24px;
-    background: linear-gradient(to right, #fff, #a5a5a5);
+    background: linear-gradient(to right, #fff, var(--blue-legacy-300), #a5a5a5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -224,18 +256,19 @@ a {
 /* Status Pills */
 .status-pill {
     position: absolute;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.95);
     color: #000;
     padding: 10px 20px;
     border-radius: 100px;
     font-weight: 600;
     font-size: 13px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(91, 141, 184, 0.3);
     display: flex;
     align-items: center;
     gap: 8px;
     z-index: 2;
     animation: float 4s ease-in-out infinite;
+    border: 1px solid rgba(111, 163, 208, 0.2);
 }
 
 .status-pill.left { top: 35%; left: -10px; animation-delay: 0s; }
@@ -287,12 +320,15 @@ a {
     align-items: center;
     font-weight: 600;
     font-size: 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(111, 163, 208, 0.4);
     padding-bottom: 2px;
+    color: var(--blue-bright);
+    transition: border-color 0.2s, color 0.2s;
 }
 
 .feature-link:hover {
-    border-color: #fff;
+    border-color: var(--blue-bright);
+    color: var(--blue-legacy-300);
 }
 
 .feature-info-box {
@@ -308,7 +344,7 @@ a {
 }
 
 .feature-info-box strong {
-    color: var(--accent-orange);
+    color: var(--gold-premium);
     font-size: 17px;
 }
 
@@ -371,7 +407,7 @@ a {
 
 .quote-mark {
     font-size: 64px;
-    color: var(--accent-orange);
+    color: var(--blue-steel);
     line-height: 1;
     margin-bottom: 24px;
     font-family: serif;
@@ -444,9 +480,15 @@ a {
     gap: 10px;
     padding: 10px 22px;
     border-radius: 999px;
-    background: #000;
+    background: var(--blue-steel);
     color: #fff;
-    border: 1px solid #111;
+    border: 1px solid var(--blue-steel);
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.appstore-button:hover {
+    background: var(--blue-bright);
+    border-color: var(--blue-bright);
 }
 
 .appstore-icon {
@@ -502,9 +544,9 @@ a {
     justify-content: center;
     padding: 8px 20px;
     border-radius: 999px;
-    border: 1px solid #e5e7eb;
-    background: #111;
-    color: #e5e7eb;
+    border: 1px solid var(--gold-premium);
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold-warm);
     font-size: 13px;
     margin-bottom: 24px;
 }
@@ -512,6 +554,52 @@ a {
 .footer-copy {
     font-size: 12px;
     color: var(--text-tertiary);
+}
+
+/* --- Color Utility Classes --- */
+.premium-badge {
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid var(--gold-premium);
+    color: var(--gold-warm);
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-success {
+    color: var(--status-success);
+}
+
+.status-warning {
+    color: var(--status-warning);
+}
+
+.status-error {
+    color: var(--status-error);
+}
+
+.text-blue {
+    color: var(--blue-steel);
+}
+
+.text-blue-bright {
+    color: var(--blue-bright);
+}
+
+.text-gold {
+    color: var(--gold-premium);
+}
+
+.bg-blue-gradient {
+    background: var(--blue-gradient);
+}
+
+.bg-gold-gradient {
+    background: var(--gold-gradient);
 }
 
 /* --- Responsive --- */
@@ -576,11 +664,17 @@ a {
         text-align: center;
         margin-top: 40px;
         padding: 16px;
-        background: #fff;
-        color: #000;
+        background: var(--blue-steel);
+        color: #fff;
         border-radius: 100px;
         font-weight: 700;
         font-size: 16px;
+        border: 1px solid var(--blue-steel);
+    }
+    
+    .footer-download-btn:hover {
+        background: var(--blue-bright);
+        border-color: var(--blue-bright);
     }
     
     .phone-mockup {
